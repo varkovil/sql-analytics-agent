@@ -4,3 +4,23 @@ __pycache__/
 .env
 data/*.db
 .ipynb_checkpoints/
+
+
+# Virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets
+.env
+
+# Local SQLite database
+data/*.db
+
+# IDE
+.vscode/
+.idea/
