@@ -8,12 +8,13 @@ from app.schema import get_database_schema
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
-)
 
+def correct_sql(question, sql_query, error, client=None):
 
-def correct_sql(question, sql_query, error):
+    if client is None:
+        client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
 
     schema = get_database_schema()
 
